@@ -1,0 +1,12 @@
+---
+title: "StatPREP Annie Home Page"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is a stub for my web page. 
+
+![](images/thumbnail.png)

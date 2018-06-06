@@ -1,0 +1,51 @@
+---
+title: "Annie's First Tutorial"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(tidyverse)
+library(mosaic)
+library(ggformula)
+library(rpart)
+library(rpart.plot)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Introduction
+
+A tutorial is a self-contained document that provides flexible facilities for the user to perform R calculations. In order to be self-contained, the document needs to attach any packages that are to be available to the user. This is usually done in the `setup` chunk (which is near the top of this document).
+
+### A command block
+
+Here's a command block that's all ready for you to use. Try it!
+
+```{r block1, exercise=TRUE}
+```
+
+### Quiz
+
+*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
+
+Some questions to verify that you understand the purposes of various base and recommended R packages:
+
+```{r quiz}
+quiz(
+  question("In the formula rain ~ humidity + temperature, which is the *response* variable?", allow_retry = TRUE,
+    answer("rain", correct = TRUE, message = "Right! The response variable is always to the left of the tilde."),
+    answer("humidity"),
+    answer("temperature"),
+    answer("none of the above")
+  ),
+  question("Which of the following is a good choice for making a data graphic involving one quantitative and one categorical variable?",
+    answer("gf_jitter", correct = TRUE, message = "Good. gf_point is also a possibility, but overplotting can be a problem."),
+    answer("gf_smooth"),
+    answer("plot_data"),
+    answer("data_plot")
+  )
+)
+```
+
